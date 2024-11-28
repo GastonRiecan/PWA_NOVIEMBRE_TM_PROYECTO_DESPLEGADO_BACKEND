@@ -1,6 +1,6 @@
 import database_pool from "../db/configMysql.js";
 import Product from "../models/product.model.js";
-class ProductRepository {
+/* class ProductRepository {
 
     static async getProducts() {
         return Product.find({ active: true })
@@ -23,10 +23,10 @@ class ProductRepository {
     static async deleteProduct(id) {
         return Product.findByIdAndUpdate(id, { active: false }, { new: true })
     }
-}
+} */
 
 
-/* class ProductRepository {
+class ProductRepository {
     static async getProducts() {
         const query = 'SELECT * FROM products WHERE active = true'
         const [registros, columnas] = await database_pool.execute(query)//Esto devuelve un array con 2 valores
@@ -114,6 +114,6 @@ class ProductRepository {
         }
     }
 
-} */
+}
 
 export default ProductRepository
